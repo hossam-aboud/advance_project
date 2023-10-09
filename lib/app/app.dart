@@ -1,3 +1,4 @@
+import 'package:advance_tharwat_course/presentaion/resources/routes_manager.dart';
 import 'package:advance_tharwat_course/presentaion/resources/theme_manager.dart';
 import 'package:flutter/material.dart';
 
@@ -22,7 +23,10 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Tue App',
+      debugShowCheckedModeBanner: false,
       theme: getApplicationTheme(),
+      onGenerateRoute: RouteGenerator.getRoute,
+      initialRoute: Routes.splashRoute,
     );
   }
 }
